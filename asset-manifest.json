@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/milkVilla/static/css/main.38df0e1a.css",
-    "main.js": "/milkVilla/static/js/main.db707b44.js",
+    "main.css": "/milkVilla/static/css/main.67ad8bc1.css",
+    "main.js": "/milkVilla/static/js/main.a2c111a9.js",
     "static/js/453.ad6eb26e.chunk.js": "/milkVilla/static/js/453.ad6eb26e.chunk.js",
     "static/media/logo.png": "/milkVilla/static/media/logo.d4bff5fd80cf1ad74343.png",
     "index.html": "/milkVilla/index.html",
-    "main.38df0e1a.css.map": "/milkVilla/static/css/main.38df0e1a.css.map",
-    "main.db707b44.js.map": "/milkVilla/static/js/main.db707b44.js.map",
+    "main.67ad8bc1.css.map": "/milkVilla/static/css/main.67ad8bc1.css.map",
+    "main.a2c111a9.js.map": "/milkVilla/static/js/main.a2c111a9.js.map",
     "453.ad6eb26e.chunk.js.map": "/milkVilla/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.38df0e1a.css",
-    "static/js/main.db707b44.js"
+    "static/css/main.67ad8bc1.css",
+    "static/js/main.a2c111a9.js"
   ]
 }

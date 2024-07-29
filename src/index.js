@@ -5,8 +5,9 @@ import "./App.css";
 
 import { Header } from "./component/Header.js";
 import { Body } from "./component/Body.js";
-import { Footer } from "./component/Footer.js";
+import Footer  from "./component/Footer.js";
 import Error from "./component/Error.js";
+import Services from "./component/Services.js";
 import { Contact } from "./component/Contact.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./component/About.js";
@@ -37,7 +38,10 @@ const appRouter = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
-
+      {
+        path: "/services",
+        element: <Services />,
+      },
       {
         path: "/contact",
         element: <Contact />,

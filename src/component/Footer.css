@@ -1,0 +1,101 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    /* padding: 20px 0; */
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    /* padding: 20px; */
+    /* min-width: 250px; */
+  }
+  
+  .footer-section h2 {
+    /* margin-bottom: 15px; */
+    font-size: 18px;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section .logo {
+    font-size: 24px;
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+  }
+  
+  .footer-section .contact span {
+    display: block;
+    /* margin-bottom: 10px; */
+  }
+  
+  .footer-section .socials a {
+    /* margin: 0 10px; */
+    font-size: 20px;
+  }
+  
+  .footer-section .socials a i {
+    color: #fff;
+  }
+  
+  .footer-section .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  
+  .footer-section .links ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section .links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+  .footer-section .contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .footer-section .contact-form button:hover {
+    background-color: #555;
+  }
+  
+  .footer-bottom {
+    padding: 10px 0;
+    font-size: 14px;
+    background-color: #222;
+  }
+  
+  .footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  

@@ -6,7 +6,7 @@ const loggedInUser = () => {
 };
 export function Header() {
   const [isloggedIn, setIsLoggedIn] = useState(true);
-  const [title, setTitle] = useState("shopping App");
+  const [title, setTitle] = useState("DRK");
   return (
     <>
       <div className="header">
@@ -14,15 +14,15 @@ export function Header() {
           <img src={logo} alt="logo of company" />
         </a>
         <h1>{title}</h1>
-        <button onClick={() => setTitle("Shopping start")}>
+        {/* <button onClick={() => setTitle("Develop React Kingdom")}>
           {" "}
-          Change title
-        </button>
+          Get Full Form
+        </button> */}
         <div className="nav-items">
           <ul>
             <li>
               {" "}
-              <Link to="/">Home</Link>
+              <Link to="/milkVilla">Home</Link>
             </li>
             <li>
               {" "}
@@ -31,6 +31,10 @@ export function Header() {
             <li>
               {" "}
               <Link to="/contact"> Contact</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/services"> Services</Link>
             </li>
           </ul>
         </div>

@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/milkVilla/static/css/main.67ad8bc1.css",
-    "main.js": "/milkVilla/static/js/main.a2c111a9.js",
-    "static/js/453.ad6eb26e.chunk.js": "/milkVilla/static/js/453.ad6eb26e.chunk.js",
-    "static/media/logo.png": "/milkVilla/static/media/logo.d4bff5fd80cf1ad74343.png",
-    "index.html": "/milkVilla/index.html",
-    "main.67ad8bc1.css.map": "/milkVilla/static/css/main.67ad8bc1.css.map",
-    "main.a2c111a9.js.map": "/milkVilla/static/js/main.a2c111a9.js.map",
-    "453.ad6eb26e.chunk.js.map": "/milkVilla/static/js/453.ad6eb26e.chunk.js.map"
+    "main.css": "/static/css/main.b8a1bab5.chunk.css",
+    "main.js": "/static/js/main.a2dbddf7.chunk.js",
+    "main.js.map": "/static/js/main.a2dbddf7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.db573acc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.db573acc.js.map",
+    "static/js/2.bf262d5c.chunk.js": "/static/js/2.bf262d5c.chunk.js",
+    "static/js/2.bf262d5c.chunk.js.map": "/static/js/2.bf262d5c.chunk.js.map",
+    "static/js/3.7c94f2b0.chunk.js": "/static/js/3.7c94f2b0.chunk.js",
+    "static/js/3.7c94f2b0.chunk.js.map": "/static/js/3.7c94f2b0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b8a1bab5.chunk.css.map": "/static/css/main.b8a1bab5.chunk.css.map",
+    "static/js/2.bf262d5c.chunk.js.LICENSE.txt": "/static/js/2.bf262d5c.chunk.js.LICENSE.txt",
+    "static/media/logo.d4bff5fd.png": "/static/media/logo.d4bff5fd.png"
   },
   "entrypoints": [
-    "static/css/main.67ad8bc1.css",
-    "static/js/main.a2c111a9.js"
+    "static/js/runtime-main.db573acc.js",
+    "static/js/2.bf262d5c.chunk.js",
+    "static/css/main.b8a1bab5.chunk.css",
+    "static/js/main.a2dbddf7.chunk.js"
   ]
 }

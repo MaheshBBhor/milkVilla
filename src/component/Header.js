@@ -1,10 +1,14 @@
 import logo from "./images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
+
 const loggedInUser = () => {
   return true;
 };
 export function Header() {
+  const isOnline=useOnline()
+
   const [isloggedIn, setIsLoggedIn] = useState(true);
   const [title, setTitle] = useState("DRK");
   return (
@@ -36,8 +40,10 @@ export function Header() {
               {" "}
               <Link to="/services"> Services</Link>
             </li>
+           
           </ul>
         </div>
+        <h1>{isOnline? "🟢Online🟢 ":"🔴Offline🔴"}</h1>
         {
           // javascript expression work here only and statement not work
           isloggedIn ? (

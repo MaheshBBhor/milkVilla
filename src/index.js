@@ -12,6 +12,7 @@ import { Contact } from "./component/Contact.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./component/About.js";
 import reportWebVitals from "./reportWebVitals";
+// import BodyCo from "./component/classComponent/BodyCo"
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <Outlet />
       {/* {Body()} */}
       {/* <Error/> */}
+      {/* <BodyCo name={"Mahesh Bhor"}/> */}
+
       <Footer />
     </>
   );

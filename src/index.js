@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import "./App.css";
-
+// import "./index.css";
+// import "./App.css";
+import TailwindInjector from "./utils/TailwindInjector";
 import { Header } from "./component/Header.js";
 import { Body } from "./component/Body.js";
-import Footer  from "./component/Footer.js";
+import Footer from "./component/Footer.js";
 import Error from "./component/Error.js";
 import Services from "./component/Services.js";
 import { Contact } from "./component/Contact.js";
@@ -17,11 +17,9 @@ import reportWebVitals from "./reportWebVitals";
 function App() {
   return (
     <>
+      <TailwindInjector />
       {Header()}
       <Outlet />
-      {/* {Body()} */}
-      {/* <Error/> */}
-      {/* <BodyCo name={"Mahesh Bhor"}/> */}
 
       <Footer />
     </>

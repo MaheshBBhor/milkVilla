@@ -1,21 +1,28 @@
-import logo from "./images/logo.png";
+
+import final3 from "./images/final3.png";
+
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import {calculator1} from "../utils/calculator1";
+
 
 const loggedInUser = () => {
   return true;
 };
+
 export function Header() {
   const isOnline = useOnline();
+  console.log(calculator1("+ 3 4"))
 
   const [isloggedIn, setIsLoggedIn] = useState(true);
-  const [title, setTitle] = useState("DRK");
+  const [title, setTitle] = useState("RDN");
   return (
     <>
       <div className="flex justify-between bg-pink-100 p-4 shadow-xl container mx-auto  items-center">
         <a href="/">
-          <img src={logo} alt="logo of company" className="h-100 pt-3 p-2" />
+          <img src={final3} alt="logo of company" className="h-44 pt-3 p-2" />
         </a>
         <h1 className=" p-20 text-black text-lg font-semibold">{title}</h1>
         {/* <button onClick={() => setTitle("Develop React Kingdom")}>

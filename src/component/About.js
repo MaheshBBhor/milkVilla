@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div>
+    <div className="border bg-pink-100 shadow-2xl p-10 m-5 ">
       <h1>About Us Page </h1>
       <section id="home" className="home">
       <h1>Welcome to Develop React Kingdom</h1>

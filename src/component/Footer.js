@@ -7,8 +7,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section about">
-          <h2 className="logo">Develop React Kingdom</h2>
-          <p>DRK PVT LTD </p>
+          <h2 className="logo">React Development (RDN)</h2>
+          <p>RDN PVT LTD </p>
           <div className="contact">
             <span>
               <i className="fas fa-phone"></i> &nbsp; +123-456-7890
@@ -63,7 +63,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} DRK | Designed by DRK
+        &copy; {new Date().getFullYear()} RDN | Designed by RDN
       </div>
     </footer>
   );

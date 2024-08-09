@@ -1,8 +1,5 @@
 // src/components/Login.js
 import React, { useState } from "react";
-import "./Login.css"; // Make sure to import the CSS file
-// import singlebuffalo from '../components/imagesDa/singlebuffalo.jpg';
-
 
 function Login({ onLogin }) {
   const [formData, setFormData] = useState({
@@ -38,40 +35,45 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="ring" 
-    // style={{
-   
-     >
-      <i style={{ "--clr": "#00ff0a" }}></i>
-      <i style={{ "--clr": "#ff0057" }}></i>
-      <i style={{ "--clr": "#fffd44" }}></i>
-      <div className="login">
-        <h2>Login To web</h2>
-        <div className="inputBx">
-          <input
-            type="text"
-            placeholder="Username"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="inputBx">
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="inputBx">
-          <input type="submit" value="Sign in" onClick={handleSubmit} />
-        </div>
-        {/* <div className="links">
-          <a href="#">Forget Password</a>
-          <a href="#">Signup</a>
-        </div> */}
+    <div className="flex items-center justify-center h-screen bg-pink-100">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-6 text-center">Login To Web</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex flex-col">
+            <label className="text-sm font-medium mb-1" htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              placeholder="Enter your username"
+              className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="text-sm font-medium mb-1" htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Enter your password"
+              className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

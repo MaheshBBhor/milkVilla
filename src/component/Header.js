@@ -70,20 +70,22 @@ export function Header() {
                 <h1>Welcome to React application</h1>
               </div>
             </div>
-          ) : (
-            <div className="text-center">
-              <button
-                className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700"
-                onClick={() => setIsLoggedIn(true)}
-              >
-                Login
-              </button>
-              <h1>
-                Hello <p className="font-bold">{user.name}</p>
-              </h1>
-              <h1>Please click on the login button</h1>
-            </div>
-          )}
+          ) : ""
+          // (
+          //   <div className="text-center">
+          //     <button
+          //       className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700"
+          //       onClick={() => setIsLoggedIn(true)}
+          //     >
+          //       Login
+          //     </button>
+          //     <h1>
+          //       Hello <p className="font-bold">{user.name}</p>
+          //     </h1>
+          //     <h1>Please click on the login button</h1>
+          //   </div>
+          // )
+          }
         </div>
       </div>
     </>

@@ -2,7 +2,7 @@
 
 const RestaurantCard = ({ restaurantList }) => {
   return (
-    <div className="w-56 p-2 m-2 shadow-2xl bg-pink-50 hover:bg-pink-300">
+    <div className="w-56 p-2 m-2 shadow-2xl bg-pink-50 hover:bg-pink-300 justify-center">
       {/* <div > */}
       <img src={restaurantList.image} />
       {/* </div> */}

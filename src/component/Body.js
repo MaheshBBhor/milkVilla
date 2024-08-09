@@ -43,7 +43,7 @@ export const Body = () => {
     </>
   ) : (
     <>
-      <div className="search-container p-5 bg-pink-100 my-5 shadow-xl rounded-lg">
+      <div className="search-container p-5 bg-pink-100 my-5 shadow-xl rounded-lg ">
         <input
           type="text"
           className="focus:bg-green-200 p-2 m-2 border-cyan-950"
@@ -65,9 +65,9 @@ export const Body = () => {
           Search
         </button>
       </div>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap content-center">
         {restaurants?.length === 0 ? (
-          <h1> No product is match to your search</h1>
+          <h1 className="  p-5 bg-pink-100 my-5 shadow-xl rounded-lg"> No product is match to your search</h1>
         ) : (
           restaurants.map((res) => {
             return <RestaurantCard restaurantList={res} />;

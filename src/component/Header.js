@@ -1,6 +1,6 @@
 import final3 from "./images/final3.png";
 import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import { calculator1 } from "../utils/calculator1";
 import { UserContext } from "../utils/userContext";
@@ -17,7 +17,12 @@ export function Header() {
 
   const [isloggedIn, setIsLoggedIn] = useState(true);
   const [title, setTitle] = useState("RDN");
-  
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    setIsLoggedIn(false); // Update the state
+    window.location.reload(); 
+    // Clear any additional user data or context if needed
+    // navigate("/milkVilla/"); 
   return (
     <>
       <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center justify-center">
@@ -52,7 +57,8 @@ export function Header() {
             <div className="text-center">
               <button
                 className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700"
-                onClick={() => setIsLoggedIn(false)}
+                // onClick={() => setIsLoggedIn(false)}
+                onClick={handleLogout} 
               >
                 Logout
               </button>

@@ -18,7 +18,7 @@ const Sections = ({ title, description, isVisible, setIsVisible }) => {
               Hide{console.log("dgbgHide")
               }
             </button> */}
-            <div>{description}</div>
+            <div className="break-words">{description}</div>
           </>
         ) : (
           <>
@@ -40,7 +40,7 @@ const Services = () => {
   const [visibleSection, setVisibleSection] = useState(" ");
 
   return (
-    <section id="services" className="border bg-pink-100 shadow-2xl p-10 m-5">
+    <section id="services" className=" bg-pink-100 shadow-2xl p-5 my-5">
       <h2 className="font-extrabold text-2xl">Our Services</h2>
       {/* <ul> */}
       <Sections

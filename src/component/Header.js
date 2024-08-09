@@ -20,7 +20,7 @@ export function Header() {
   
   return (
     <>
-      <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center justify-center sm:justify-start ">
+      <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center justify-center">
         <a href="/about">
           <img src={final3} alt="logo of company" className="h-16 md:h-32" />
         </a>

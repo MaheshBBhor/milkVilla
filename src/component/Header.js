@@ -22,7 +22,8 @@ export function Header() {
     setIsLoggedIn(false); // Update the state
     window.location.reload(); 
     // Clear any additional user data or context if needed
-    // navigate("/milkVilla/"); 
+    // navigate("/milkVilla/");
+  };
   return (
     <>
       <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center justify-center">

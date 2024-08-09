@@ -20,13 +20,13 @@ export function Header() {
   
   return (
     <>
-      <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center  justify-center sm:justify-start">
+      <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center justify-center sm:justify-start ">
         <a href="/about">
           <img src={final3} alt="logo of company" className="h-16 md:h-32" />
         </a>
         <h1 className="text-black text-lg font-semibold ml-4 md:ml-20 mt-2 md:mt-0">{title}</h1>
 
-        <div className="ml-auto mt-2 sm:mt-0">
+        <div className="ml-auto mt-2 md:mt-0">
           <ul className="flex flex-wrap justify-center">
             <li className="px-2 text-blue-950 hover:text-purple-400 underline transition-colors duration-300">
               <Link to="/milkVilla">Home</Link>
@@ -43,7 +43,7 @@ export function Header() {
           </ul>
         </div>
 
-        <h1 className="md:ml-12 mr-4 md:mr-12 text-blue-950 hover:text-blue-500 transition-colors duration-300">
+        <h1 className="ml-4 md:ml-12 mr-4 md:mr-12 text-blue-950 hover:text-blue-500 transition-colors duration-300">
           {isOnline ? "🟢Online🟢" : "🔴Offline🔴"}
         </h1>
 

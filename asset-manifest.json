@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/milkVilla/static/css/main.3b6a1c1f.chunk.css",
-    "main.js": "/milkVilla/static/js/main.daf0e6f1.chunk.js",
-    "main.js.map": "/milkVilla/static/js/main.daf0e6f1.chunk.js.map",
+    "main.js": "/milkVilla/static/js/main.44d6650c.chunk.js",
+    "main.js.map": "/milkVilla/static/js/main.44d6650c.chunk.js.map",
     "runtime-main.js": "/milkVilla/static/js/runtime-main.36315dcd.js",
     "runtime-main.js.map": "/milkVilla/static/js/runtime-main.36315dcd.js.map",
     "static/js/2.f984bd3f.chunk.js": "/milkVilla/static/js/2.f984bd3f.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.36315dcd.js",
     "static/js/2.f984bd3f.chunk.js",
     "static/css/main.3b6a1c1f.chunk.css",
-    "static/js/main.daf0e6f1.chunk.js"
+    "static/js/main.44d6650c.chunk.js"
   ]
 }

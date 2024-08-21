@@ -63,9 +63,9 @@ export function Header() {
               >
                 Logout
               </button>
-              <div>
+              <div className="bg-indigo-600 text-white font-semibold mt-1 py-2 px-4 rounded-lg hover:bg-indigo-700">
                 <h1>
-                  Hello <p>{user.name}</p>
+                  Hello <p>{user.name.toUpperCase()}</p>
                 </h1>
                 <h1>Welcome to React application</h1>
               </div>

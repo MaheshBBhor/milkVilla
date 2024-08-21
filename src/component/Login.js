@@ -1,9 +1,11 @@
 // src/components/Login.js
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../utils/userContext";
 
 function Login({ onLogin }) {
   const [formData, setFormData] = useState({
     username: "",
+    email: "",
     password: "",
   });
 
@@ -15,21 +17,17 @@ function Login({ onLogin }) {
     });
   };
 
+  const { setUser } = useContext(UserContext);
+
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // const { username, password } = formData;
-    // const usersData = require("../users.json");
-    // const users = usersData.users;
-
-    // const foundUser = users.find(
-    //   (user) => user.username === username && user.password === password
-    // );
-
-    // if (foundUser) {
-      onLogin();
-    // } else {
-    //   alert("Login failed. Please check your credentials.");
-    // }
+    e.preventDefault();
+    const { username, email } = formData;
+    
+    onLogin();
+    setUser({
+      name: username,
+      email: email,
+    });
   };
 
   return (
@@ -38,7 +36,7 @@ function Login({ onLogin }) {
         <h2 className="text-2xl font-bold mb-6 text-center">Login To React App</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1" htmlFor="username">Username</label>
+            <label className="text-sm font-medium mb-1" htmlFor="username">Name</label>
             <input
               type="text"
               id="username"
@@ -47,20 +45,33 @@ function Login({ onLogin }) {
               onChange={handleChange}
               placeholder="Enter your name"
               className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
+              // required
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1" htmlFor="password">Password</label>
+            <label className="text-sm font-medium mb-1" htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              // required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="text-sm font-medium mb-1" htmlFor="password">Password   (Optional)</label>
             <input
               type="password"
               id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="Enter any password"
+              placeholder="Enter your password"
               className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
+              // required
             />
           </div>
           <div className="flex justify-center">

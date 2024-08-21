@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
-// import "./index.css";
-// import "./App.css";
+
 import TailwindInjector from "./utils/TailwindInjector";
 import { Header } from "./component/Header.js";
 import { Body } from "./component/Body.js";
 import Login from "./component/Login";
-
+import { UserContext } from "./utils/userContext";
 import Footer from "./component/Footer.js";
 import Error from "./component/Error.js";
 import Services from "./component/Services.js";
@@ -17,12 +16,17 @@ import About from "./component/About.js";
 import reportWebVitals from "./reportWebVitals";
 
 function App() {
+  const [user, setUser] = useState({
+    name:"",
+    email:""
+  });
   const [loggedIn, setLoggedIn] = useState(false);
   const handleLogin = () => {
     setLoggedIn(true);
   };
   return (
     <>
+     <UserContext.Provider value={{ user, setUser }}> 
       <TailwindInjector />
       {loggedIn ? (
         <>
@@ -33,7 +37,9 @@ function App() {
       ) : (
         <Login onLogin={handleLogin} />
       )}
+      </UserContext.Provider>
     </>
+
   );
   // return (
   //   <>

@@ -3,6 +3,9 @@ import { restaurantList } from "../constant";
 import RestaurantCard from "./RestaurantCard";
 import { Shimmer } from "./Shimmer";
 import useOnline from "../utils/useOnline";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
+
 function filterData(searchTxt, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
     restaurant?.title?.toLowerCase().includes(searchTxt?.toLowerCase())
@@ -15,24 +18,22 @@ export const Body = () => {
   const [allrestaurants, setAllRestuarants] = useState([]);
 
   useEffect(() => {
-    console.log("heeloo");
     setRestuarants(restaurantList);
     setAllRestuarants(restaurantList);
-    // getRestarants();
   }, [searchTxt]);
-
-  // async function getRestarants() {
-  //   const data = await fetch(
-  //     "https://www.bigbasket.com/listing-svc/v2/products?type=pc&slug=dairy&page=1"
-  //   );
-  //   const json = await data.json();
-  //   console.log(",jhsdf", json);
-  //   // setRestuarants(json.data.cards)
-  // }
-
-  // if (restaurants?.length === 0) {
-  //   return <h1> No product is match to your search</h1>;
-  // }
+  console.log("restaurantList", restaurantList);
+  const dispatch = useDispatch();
+ 
+  const handleAddItem = (restIdToFind) => {
+    const itemInCart = restaurantList.find(
+      (restaurantList) => restaurantList.id === restIdToFind
+    );
+    console.log("itemInCart11", itemInCart);
+    if (itemInCart) {
+      dispatch(addItem(itemInCart));
+    }
+  };
+ 
   const isOnline = useOnline();
   if (!isOnline) {
     return <h1>🔴Offline,Please check your internet connection</h1>;
@@ -53,13 +54,11 @@ export const Body = () => {
             setSearchTxt(e.target.value);
           }}
         />
-        {/* <h1>{searchClicked}</h1> */}
         <button
           className="search-btn p-2 m-2 bg-purple-900 hover:bg-purple-500 text-white rounded-lg"
           onClick={() => {
             const data = filterData(searchTxt, allrestaurants);
             setRestuarants(data);
-            // setAllRestuarants(restaurantList)
           }}
         >
           Search
@@ -67,10 +66,15 @@ export const Body = () => {
       </div>
       <div className="flex flex-wrap content-center">
         {restaurants?.length === 0 ? (
-          <h1 className="  p-5 bg-pink-100 my-5 shadow-xl rounded-lg"> No product is match to your search</h1>
+          <h1 className="  p-5 bg-pink-100 my-5 shadow-xl rounded-lg">
+            {" "}
+            No product is match to your search
+          </h1>
         ) : (
           restaurants.map((res) => {
-            return <RestaurantCard restaurantList={res} />;
+            return (
+              <RestaurantCard handleAddItem={handleAddItem} restaurantList={res} isAddItem={true} />
+            );
           })
         )}
       </div>

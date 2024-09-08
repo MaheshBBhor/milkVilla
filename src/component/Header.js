@@ -4,6 +4,7 @@ import { Link ,useNavigate } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import { calculator1 } from "../utils/calculator1";
 import { UserContext } from "../utils/userContext";
+import { useSelector } from "react-redux";
 
 const loggedInUser = () => {
   return true;
@@ -13,7 +14,8 @@ export function Header() {
   const isOnline = useOnline();
   console.log(calculator1("+ 3 4"));
   const { user } = useContext(UserContext);
-  console.log(user, "user");
+
+  const cartItems=useSelector((store)=>store.cart.items)
 
   const [isloggedIn, setIsLoggedIn] = useState(true);
   const [title, setTitle] = useState("RDN");
@@ -45,6 +47,9 @@ export function Header() {
             </li>
             <li className="px-2 text-blue-950 hover:text-purple-400 underline transition-colors duration-300">
               <Link to="/services">Services</Link>
+            </li>
+            <li className="px-2 text-blue-950 hover:text-purple-400 underline transition-colors duration-300">
+              <Link to="/cart">Cart-{cartItems.length}</Link>
             </li>
           </ul>
         </div>

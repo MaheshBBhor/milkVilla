@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
-
+import { Provider  } from "react-redux";
 import TailwindInjector from "./utils/TailwindInjector";
 import { Header } from "./component/Header.js";
 import { Body } from "./component/Body.js";
+import { Cart } from "./component/Cart.js";
 import Login from "./component/Login";
 import { UserContext } from "./utils/userContext";
 import Footer from "./component/Footer.js";
@@ -14,6 +15,7 @@ import { Contact } from "./component/Contact.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./component/About.js";
 import reportWebVitals from "./reportWebVitals";
+import store from "./utils/store.js";
 
 function App() {
   const [user, setUser] = useState({
@@ -26,6 +28,7 @@ function App() {
   };
   return (
     <>
+    <Provider store={store}>
      <UserContext.Provider value={{ user, setUser }}> 
       <TailwindInjector />
       {loggedIn ? (
@@ -38,18 +41,12 @@ function App() {
         <Login onLogin={handleLogin} />
       )}
       </UserContext.Provider>
+      </Provider>
     </>
+    
 
   );
-  // return (
-  //   <>
-  //     <TailwindInjector />
-  //     {Header()}
-  //     <Outlet />
 
-  //     <Footer />
-  //   </>
-  // );
 }
 const appRouter = createBrowserRouter([
   {
@@ -72,6 +69,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

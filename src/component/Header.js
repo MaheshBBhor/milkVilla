@@ -21,7 +21,7 @@ export function Header() {
   const [title, setTitle] = useState("RDN");
   const navigate = useNavigate();
   const handleLogout = () => {
-    setIsLoggedIn(false); 
+    setIsLoggedIn(false);
     navigate("/milkVilla/");
     window.location.reload();
   };
@@ -29,10 +29,14 @@ export function Header() {
     <>
       <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center justify-center">
         {/* <a href="/milkVilla"> */}
-        <img src={final3} alt="logo of company" className="h-16 md:h-32" />
+        <img
+          src={final3}
+          alt="logo of company"
+          className="h-16 ml-4  md:h-32"
+        />
         {/* </a> */}
         <h1 className="text-black text-lg font-semibold ml-4 md:ml-20 mt-2 md:mt-0">
-          {title}
+          {/* {title} */}
         </h1>
 
         <div className="ml-auto mt-2 md:mt-0">

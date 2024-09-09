@@ -16,15 +16,21 @@ const RestaurantCard = ({ restaurantList, handleAddItem, isAddItem }) => {
         alt={`${restaurantList?.title} image`}
         className="h-24 w-full object-contain md:h-32"
       />
-      <h4 className="font-bold text-xs md:text-sm mt-2">
-        {" "}
-        {restaurantList?.title}
-      </h4>
-      <h3 className="text-xs md:text-sm">{restaurantList?.category}</h3>
-      <h4 className="text-xs md:text-sm">
-        {" "}
-        Rating: {restaurantList?.rating?.rate}
-      </h4>
+      <div className="h-15 w-full object-contain md:h-32">
+        <h4 className="font-bold text-xs md:text-sm mt-2">
+          {" "}
+          {restaurantList?.title}
+        </h4>
+        <h3 className="text-xs md:text-sm">{restaurantList?.category}</h3>
+        <h4 className="text-xs md:text-sm">
+          {" "}
+          Rating: {restaurantList?.rating?.rate}
+        </h4>
+      </div>
+      <div className="mb-5 text-green-600 font-bold text-xs absolute ">
+        {isItemAdded ? <div> item added successfully in cart</div> : ""}
+      </div>
+
       <div>
         {isAddItem ? (
           <button
@@ -44,8 +50,6 @@ const RestaurantCard = ({ restaurantList, handleAddItem, isAddItem }) => {
           </button>
         )}
       </div>
-      <div>{isItemAdded && <div className="text-green-600 font-bold text-xs"> item added in cart successfully</div>}</div>
-
     </div>
   );
 };

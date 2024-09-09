@@ -22,7 +22,7 @@ function Login({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { username, email } = formData;
-    
+
     onLogin();
     setUser({
       name: username,
@@ -33,10 +33,14 @@ function Login({ onLogin }) {
   return (
     <div className="flex items-center justify-center h-screen bg-pink-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login To React App</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          Login To React App
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1" htmlFor="username">Name</label>
+            <label className="text-sm font-medium mb-1" htmlFor="username">
+              Name (Currently Optional)
+            </label>
             <input
               type="text"
               id="username"
@@ -49,7 +53,9 @@ function Login({ onLogin }) {
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1" htmlFor="email">Email</label>
+            <label className="text-sm font-medium mb-1" htmlFor="email">
+              Email (Currently Optional)
+            </label>
             <input
               type="email"
               id="email"
@@ -62,7 +68,9 @@ function Login({ onLogin }) {
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1" htmlFor="password">Password   (Optional)</label>
+            <label className="text-sm font-medium mb-1" htmlFor="password">
+              Password (Currently Optional)
+            </label>
             <input
               type="password"
               id="password"

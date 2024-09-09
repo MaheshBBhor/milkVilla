@@ -35,19 +35,19 @@ const Footer = () => {
 
         <div className="footer-section links">
           <h2>Quick Links</h2>
-          <ul>
-            <li>
+          <ul className="flex justify-center  m-2 ">
+            <li className="pr-5">
               <Link to="/milkVilla">Home</Link>{" "}
             </li>
-            <li>
-            <Link to="/about">About</Link>
+            <li className="pr-5">
+              <Link to="/about">About</Link>
               {/* <a href="#">About</a> */}
             </li>
-            <li>
-            <Link to="/services"> Services</Link>
+            <li className="pr-5">
+              <Link to="/services"> Services</Link>
             </li>
-            <li>
-            <Link to="/contact"> Contact</Link>
+            <li className="pr-5">
+              <Link to="/contact"> Contact</Link>
             </li>
           </ul>
         </div>

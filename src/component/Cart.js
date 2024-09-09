@@ -5,8 +5,6 @@ import { useDispatch } from "react-redux";
 import { removeItem, clearCart } from "../utils/cartSlice";
 export function Cart() {
   const [isItemRemoved, setIsItemRemoved] = useState(false);
-  const [isClearCart, setIsClearCart] = useState(false);
-
   const dispatch = useDispatch();
 
   const cartItems = useSelector((store) => store.cart.items);
@@ -18,10 +16,8 @@ export function Cart() {
   };
 
   const onClearCart = () => {
-    // setIsClearCart(true);
-    // if (isClearCart) {
+  
     dispatch(clearCart());
-    // }
   };
   return (
     <>
@@ -51,11 +47,11 @@ export function Cart() {
             Please add Items
           </div>
         ) : (
-          cartItems.map((items) => {
+          cartItems.map((item, index) => {
             return (
               <RestaurantCard
-                key={items.id}
-                restaurantList={items}
+                key={`${item.id}-${index}`}
+                restaurantList={item}
                 handleAddItem={handleRemoveItem}
               />
             );

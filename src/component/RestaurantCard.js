@@ -6,7 +6,7 @@ const RestaurantCard = ({ restaurantList, handleAddItem, isAddItem }) => {
   const handleClick = (id) => {
     handleAddItem(id);
     setIsItemAdded(true);
-    setTimeout(() => setIsItemAdded(false), 1000);
+    setTimeout(() => setIsItemAdded(false), 500);
   };
 
   return (
@@ -44,7 +44,7 @@ const RestaurantCard = ({ restaurantList, handleAddItem, isAddItem }) => {
           </button>
         )}
       </div>
-      <div>{isItemAdded && <div className="text-green-600 font-bold text-xs"> item added successfully</div>}</div>
+      <div>{isItemAdded && <div className="text-green-600 font-bold text-xs"> item added in cart successfully</div>}</div>
 
     </div>
   );

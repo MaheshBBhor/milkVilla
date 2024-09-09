@@ -2,9 +2,10 @@ import { useSelector } from "react-redux";
 import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { removeItem } from "../utils/cartSlice";
+import { removeItem, clearCart } from "../utils/cartSlice";
 export function Cart() {
   const [isItemRemoved, setIsItemRemoved] = useState(false);
+  const [isClearCart, setIsClearCart] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -16,13 +17,31 @@ export function Cart() {
     setTimeout(() => setIsItemRemoved(false), 1000);
   };
 
+  const onClearCart = () => {
+    // setIsClearCart(true);
+    // if (isClearCart) {
+    dispatch(clearCart());
+    // }
+  };
   return (
     <>
       <div className="border bg-pink-100 shadow-2xl p-5 m-1 ">
         {" "}
-        <div>Cart Items-{cartItems.length}</div>
+        <div className="flex justify-between items-center">
+          <div>Cart Items-{cartItems.length}</div>
+          {cartItems.length > 0 && (
+            <button
+              className="content-end p-2 m-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg"
+              onClick={onClearCart}
+            >
+              Clear Cart
+            </button>
+          )}
+        </div>
         {isItemRemoved && (
-          <div className="text-red-600 font-bold text-xs">One Item removed</div>
+          <div className="text-red-600 font-bold text-xs">
+            One Item removed from cart
+          </div>
         )}
       </div>
 

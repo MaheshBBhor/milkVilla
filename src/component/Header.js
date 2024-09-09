@@ -1,6 +1,6 @@
 import final3 from "./images/final3.png";
 import { useState, useContext } from "react";
-import { Link ,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import { calculator1 } from "../utils/calculator1";
 import { UserContext } from "../utils/userContext";
@@ -15,24 +15,25 @@ export function Header() {
   console.log(calculator1("+ 3 4"));
   const { user } = useContext(UserContext);
 
-  const cartItems=useSelector((store)=>store.cart.items)
+  const cartItems = useSelector((store) => store.cart.items);
 
   const [isloggedIn, setIsLoggedIn] = useState(true);
   const [title, setTitle] = useState("RDN");
   const navigate = useNavigate();
   const handleLogout = () => {
-    setIsLoggedIn(false); // Update the state
-    window.location.reload(); 
-    // Clear any additional user data or context if needed
-    // navigate("/milkVilla/");
+    setIsLoggedIn(false); 
+    navigate("/milkVilla/");
+    window.location.reload();
   };
   return (
     <>
       <div className="flex flex-wrap bg-pink-100 p-4 shadow-xl items-center justify-center">
         {/* <a href="/milkVilla"> */}
-          <img src={final3} alt="logo of company" className="h-16 md:h-32" />
+        <img src={final3} alt="logo of company" className="h-16 md:h-32" />
         {/* </a> */}
-        <h1 className="text-black text-lg font-semibold ml-4 md:ml-20 mt-2 md:mt-0">{title}</h1>
+        <h1 className="text-black text-lg font-semibold ml-4 md:ml-20 mt-2 md:mt-0">
+          {title}
+        </h1>
 
         <div className="ml-auto mt-2 md:mt-0">
           <ul className="flex flex-wrap justify-center">
@@ -59,37 +60,40 @@ export function Header() {
         </h1>
 
         <div className="mr-4 mt-2 md:mt-0">
-          {isloggedIn ? (
-            <div className="text-center">
-              <button
-                className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700"
-                // onClick={() => setIsLoggedIn(false)}
-                onClick={handleLogout} 
-              >
-                Logout
-              </button>
-              <div className="bg-indigo-600 text-white font-semibold mt-1 py-2 px-4 rounded-lg hover:bg-indigo-700">
-                <h1>
-                  Hello <p>{user.name.toUpperCase()}</p>
-                </h1>
-                <h1>Welcome to React application</h1>
+          {
+            isloggedIn ? (
+              <div className="text-center">
+                <button
+                  className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700"
+                  // onClick={() => setIsLoggedIn(false)}
+                  onClick={handleLogout}
+                >
+                  Logout
+                </button>
+                <div className="bg-indigo-600 text-white font-semibold mt-1 py-2 px-4 rounded-lg hover:bg-indigo-700">
+                  <h1>
+                    Hello <p>{user.name.toUpperCase()}</p>
+                  </h1>
+                  <h1>Welcome to React application</h1>
+                </div>
               </div>
-            </div>
-          ) : ""
-          // (
-          //   <div className="text-center">
-          //     <button
-          //       className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700"
-          //       onClick={() => setIsLoggedIn(true)}
-          //     >
-          //       Login
-          //     </button>
-          //     <h1>
-          //       Hello <p className="font-bold">{user.name}</p>
-          //     </h1>
-          //     <h1>Please click on the login button</h1>
-          //   </div>
-          // )
+            ) : (
+              ""
+            )
+            // (
+            //   <div className="text-center">
+            //     <button
+            //       className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700"
+            //       onClick={() => setIsLoggedIn(true)}
+            //     >
+            //       Login
+            //     </button>
+            //     <h1>
+            //       Hello <p className="font-bold">{user.name}</p>
+            //     </h1>
+            //     <h1>Please click on the login button</h1>
+            //   </div>
+            // )
           }
         </div>
       </div>
